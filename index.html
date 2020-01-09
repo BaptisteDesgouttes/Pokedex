@@ -1,0 +1,118 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Pokedex</title>
+  
+</head>
+<body id="body">
+    <nav class="nav">
+        <div class="rond_gris"></div>
+        <div id="lumiere_bleue">
+            <div id="rond_bleu"></div>
+            <div id="bleu_clair"></div>
+        </div>        
+        <div class="trapeze_fonce"></div>
+        <div class="trapeze_clair"></div>
+         <div id="cadre_recherche"> 
+            
+             <div id="couche1_bleu">
+                <div id="couche2_bleu"></div>
+                <div id="couche2_bleu2"></div>
+                <input id="input" name="" type="text" placeholder="Enter a Pokemon name !">
+                <!-- <div id="couche3_bleu"></div> -->
+             </div>
+             <div id="emplacement_bouton_rouge">
+                <button onclick="clignotement();recherche(1)" id="bouton_rouge">SEARCH</button>
+            </div>
+             <div id="lignes_creuses">
+                <div id="ligne1"></div>
+                <div id="ligne2"></div>
+                <div id="ligne3"></div>
+            </div>
+        </div>
+
+        <div id="emplacement_lumieres">
+            <div id="rond1">
+                <div class="ombre_petits_ronds"></div>
+            </div>
+            <div id="rond2">
+                <div class="ombre_petits_ronds"></div>
+            </div>
+            <div id="rond3">
+                <div class="ombre_petits_ronds"></div>
+            </div>
+        </div>
+<!---------------------------------------------------------STOCKAGE 6 POKEBALLS----------------------------------------->
+         <div id="six_pokeballs">
+            <div id="rangee1_pokeballs">
+                <div class="emplacement_pokeballs" id="def_1">
+                    <div id="pb_1" class="ombre_emplacement_pokeball"></div>
+                </div>
+                <div class="emplacement_pokeballs" id="def_2">
+                    <div id="pb_2" class="ombre_emplacement_pokeball"></div>
+                </div>
+                <div class="emplacement_pokeballs" id="def_3">
+                    <div id="pb_3" class="ombre_emplacement_pokeball"></div>
+                </div>
+            </div>
+            <div id="rangee2_pokeballs">
+                <div class="emplacement_pokeballs" id="def_4">
+                    <div id="pb_4" class="ombre_emplacement_pokeball"></div>
+                </div>
+                <div class="emplacement_pokeballs" id="def_5">
+                    <div id="pb_5" class="ombre_emplacement_pokeball"></div>
+                </div>
+                <div class="emplacement_pokeballs" id="def_6">
+                    <div id="pb_6" class="ombre_emplacement_pokeball"></div>
+                </div>
+            </div>
+        </div> 
+        <button id="reset" type="button" class="vider_pokeballs" onclick="effacer_pokeballs()">RESET</button>
+    </nav>
+    
+<!---------------------------------------------------------CARTE DU POKEMON----------------------------------------->
+    
+    <section class="center-div">
+        <div class="pokemon">
+            <div class="image-infos"></div>
+            <div class="infos-bas">
+                <div class="infos-gauche"></div>
+                <div class="infos-droite"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!------------------------------------------------------ESPACE CREATION POKEBALL-------------------------------------------->
+    <div id="div_create-pokeball">
+        <div id="titre_create_pokeball">MY POKEBALL</div>
+        <form id="create-pokeball" name="create" >
+            <select name="color">
+                <option value="#9048b9">Purple</option>
+                <option value="#ca5c40">Orange</option>
+                <option value="#4eb898">Cyan</option>
+                <option value="#88a14e">Kaki</option>
+            </select>
+            <select name="type">
+                <option value="poke">Pokeball</option>
+                <option value="super">Superball</option>
+                <option value="hyper">Hyperball</option>
+                <option value="master">Masterball</option>
+            </select>
+            <button class="creation" type="button" onclick="previsualisation()">PREVIEW</button> 
+            <button type="button" class="sauvegarde" onclick="sauver_pokeball()">GO !</button>
+        </form>
+        <div id="pokeball" class="centreenbas">
+            <div class="hautpb"></div>
+            <div id="baspb"></div>
+            <div id="cerclepb"></div>
+            <div id="barrepb"></div>
+            <div id="centrepb"></div>
+        </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
